@@ -20,6 +20,8 @@ The PEP program finds the performance of solid (or liquid) rocket propellents.
 * The theory behind the program is described in NWC TP 6037.
 * This application is running on an IBM z/OS machine, however it should be compatible with others.
 
+![Screenshot of PEP Report](https://raw.githubusercontent.com/Haynie-Research-and-Development/pep-for-zos/master/screenshots/peprpt.png)
+
 ### Files
 1. PEP
    1. PEP Fortran source code
