@@ -1,0 +1,24 @@
+//LHAYNIEU    JOB (HAYNIE),'PEP REPORT',
+//            CLASS=U,NOTIFY=&SYSUID,MSGCLASS=U,REGION=4096K
+//**********************************************************************
+//* CATEGORY.: ROCKET CALCULATIONS
+//* GROUP....: PROPELLANT EVALUATION PROGRAM
+//* AUTHOR...: LANCE HAYNIE <LANCE@HAYNIEMAIL.COM>
+//* DATE.....: 2017-09-14
+//* PURPOSE..: RUN PEP REPORT
+//**********************************************************************
+//* NOTE: EDIT THE SET STATEMENTS TO MATCH YOUR INPUT/OUTPUT FILES
+//*       YOU WILL NEED TO PREALLOCATE YOUR REPORT FILE
+//FORMULA     SET FORMULA=KNDXIO
+//**********************************************************************
+//*****************DO NOT EDIT BELOW THIS LINE**************************
+//**********************************************************************
+//PEP         EXEC PGM=PEP
+//STEPLIB     DD DSN=HRD.ROCKET.PROD.LOADLIB,DISP=SHR
+//SYSOUT      DD SYSOUT=*
+//CON         DD DSN=&&CON
+//SETUP       DD DSN=HRD.ROCKET.DATA.PEP.SETUP,DISP=SHR
+//PROPEL      DD DSN=HRD.ROCKET.DATA.PEP.PROPEL,DISP=SHR
+//THERMO      DD DSN=HRD.ROCKET.DATA.PEP.THERMO,DISP=SHR
+//REPOUT      DD DSN=HRD.ROCKET.REPORTS.PEP.&FORMULA,DISP=SHR
+//INPUT       DD DSN=HRD.ROCKET.DATA.PEP.INPUT.&FORMULA,DISP=SHR
