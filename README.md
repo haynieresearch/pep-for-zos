@@ -20,6 +20,29 @@ The PEP program finds the performance of solid (or liquid) rocket propellents.
 * The theory behind the program is described in NWC TP 6037.
 * This application is running on an IBM z/OS machine, however it should be compatible with others.
 
+### Files
+1. PEP
+   1. PEP Fortran source code
+2. CRTHERMO
+   1. Fortran program to create the THERMO binary file
+3. DATA.PEP.PROPEL
+   1. Propellent database
+4. DATA.PEP.THERMO
+   1. Binary reaction product database
+5. DATA.PEP.THERMO.INPUT
+   1. Input file used to create THERMO from CRTHERMO
+6. DATA.PEP.SETUP
+   1. Information file used by PEP, you shouldn't have to alter this to run as is
+7. DATA.PEP.INPUT.*
+   1. Input file examples
+7. REPORTS.PEP.*
+   1. Sample report files
+8. jcl/PEP
+   1. JCL to execute the PEP program
+   2. Once setup, you should only have to change FORMULA=KNDXIO
+9. jcl/CRTHERMO
+   1. JCL to execute the CRTHERMO program and create the THERMO database
+
 ### Options
 1. Up to 10 ingredients may be input by the user to be evaluated.
 2. There are also eight other options:
@@ -109,7 +132,7 @@ Remember: The number of combined ingredients cannot exceed 10!
 5. Data lines 1, 2, 3, 4, 5, 6, 7, and at least 9 or 10 and line 11 are always input.
 6. When the fix temperature is used the exit pressure is .01 ATM
 
-### Notes on output
+### Notes on Output
 1. The gram-atom amounts for each chemical element are based on the given system weight.
 2. The enthalpy has units of kilocalories per system weight and the entropy has units of calories/K per system weight.
 3. GAS identifies the number of moles of gas produced per system weight. Effective molecular weight is obtained by dividing GAS into system weight.  Note that although non-gases are not included in this computation this is the proper molecular weight to use in gas dynamic equations.
