@@ -11,7 +11,10 @@ balances the chemical equations based on the propellant reactants and byproducts
 The method used by PEP is known as minimization of Gibbs free energy.
 
 I am probably one of the few that still uses, and prefers, mainframe applications
-so I am not sure how useful this will be to the general public.
+so I am not sure how useful this will be to the general public. However, I did want
+to share to help document the PEP application as a whole. Furthermore, you can most
+likely use this code to recompile on other operating systems. If you have any questions,
+please feel free to reach out.
 
 ### Purpose of the Program
 The PEP program finds the performance of solid (or liquid) rocket propellents.
@@ -21,6 +24,10 @@ The PEP program finds the performance of solid (or liquid) rocket propellents.
 * This application is running on an IBM z/OS machine, however it should be compatible with others.
 
 ![Screenshot of PEP Report](https://raw.githubusercontent.com/Haynie-Research-and-Development/pep-for-zos/master/screenshots/peprpt.png)
+
+![Screenshot of PEP JCL](https://raw.githubusercontent.com/Haynie-Research-and-Development/pep-for-zos/master/screenshots/pepjcl.png)
+
+![Screenshot of PEP Input](https://raw.githubusercontent.com/Haynie-Research-and-Development/pep-for-zos/master/screenshots/pepinput.png)
 
 ### Files
 1. PEP
