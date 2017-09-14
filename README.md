@@ -88,7 +88,7 @@ Four data files are required to operate Propellant Evaluation Program for z/OS
 4. The initial weight need not equal to 100.
 5. Occasionally, a set of ingredients will not converge on the steady state solution. A message indicated the reliability of the results is printed, usually the results are wrong.
 
-### User input data
+### User Input Data
 The 11 data lines required to run PEP are listed below.
 If you don't understand Fortran variables, it may be a good idea to read a little. However, it's pretty straight forward if you use my examples.
 
