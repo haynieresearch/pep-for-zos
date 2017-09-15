@@ -15,6 +15,7 @@
 ************************************************************************
 * MODIFICATIONS
 * 2017-09-14 - LHAYNIE - INITIAL VERSION
+* 2017-09-15 - LHAYNIE - FIXED REPORT LAYOUT FOR PRINTING
 ************************************************************************
 *PROPELLANT EVALUATION PROGRAM FOR Z/OS
 *COPYRIGHT (C) 2017  HAYNIE RESEARCH & DEVELOPMENT
@@ -1166,7 +1167,7 @@ C COMPUTE DESIRED EXPANSION RATIO FOR POP USE
  9876 WRITE (IO6,*) "***********************************************************
      .********************************"
       WRITE(IO6,1246)
- 1246 FORMAT(/1X,'PERFORMANCE: STATIC ON FIRST LINE, ',
+ 1246 FORMAT(/1X,'PERFORMANCE: FROZEN ON FIRST LINE, ',
      .  'SHIFTING ON SECOND LINE')
       WRITE (IO6,1243)
  1243 FORMAT(/' IMPULSE   IS EX      T*      P*      C*    ISP*',
@@ -1407,6 +1408,7 @@ COMMENT.   COMPOSITION AND STATE VARIABLE OUTPUT ROUTINE.
       PF = PR*14.70069
       WRITE (IO6,*) "***********************************************************
      .********************************"
+      WRITE (IO6,*) " "
       IF(PR.EQ.W1(5))WRITE(IO6,*) "CHAMBER RESULTS:"
       IF(PR.EQ.W1(6))WRITE(IO6,*) "EXHAUST RESULTS:"
       WRITE (IO6,102)
@@ -1639,12 +1641,12 @@ C  NOTE DELETABLE ROUTINES SETCLK AND LKCLKS THAT MEASURE CPU TIME
       W1(6) = W1(6)/14.70069
 320   ICASE=ICASE+1
       WRITE (1,321) ICASE,LCASE
-      WRITE (IO,*) "HAYNIE RESEARCH & DEVELOPMENT"
-      WRITE (IO,*) "PROPELLANT EVALUATION PROGRAM FOR Z/OS"
-      WRITE (IO,*) " "
 321   FORMAT (' CASE',I3,' OF',I3,'   ',A14)
       WRITE (IO,330) USER,ICASE,LCASE
-  330 FORMAT('1',1X,A17,' '/
+  330 FORMAT('1',1X,/," HAYNIE RESEARCH & DEVELOPMENT",/
+     1 " PROPELLANT EVALUATION PROGRAM FOR Z/OS",/
+     2 " VERSION 1.1",/
+     4 " ",/," ",A17,
      1  '  CASE',I3,' OF',I3,'     ',A11,' AT ',A14/)
       WRITE (IO,331)
 331   FORMAT ('   CODE ',34X,'WEIGHT    D-H  DENS      COMPOSITION')
