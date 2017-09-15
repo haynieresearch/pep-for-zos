@@ -1641,14 +1641,10 @@ C  NOTE DELETABLE ROUTINES SETCLK AND LKCLKS THAT MEASURE CPU TIME
       WRITE (1,321) ICASE,LCASE
       WRITE (IO,*) "HAYNIE RESEARCH & DEVELOPMENT"
       WRITE (IO,*) "PROPELLANT EVALUATION PROGRAM FOR Z/OS"
-      WRITE (IO,*) "VERSION 1.0"
-      WRITE (IO,*) "************************************************************
-     .*******************************"
-      WRITE (IO,*) "SUMMARY:"
       WRITE (IO,*) " "
 321   FORMAT (' CASE',I3,' OF',I3,'   ',A14)
       WRITE (IO,330) USER,ICASE,LCASE
-  330 FORMAT('1',1X,A17,' - PROPELLANT EVALUATION PROGRAM FOR Z/OS,'/
+  330 FORMAT('1',1X,A17,' '/
      1  '  CASE',I3,' OF',I3,'     ',A11,' AT ',A14/)
       WRITE (IO,331)
 331   FORMAT ('   CODE ',34X,'WEIGHT    D-H  DENS      COMPOSITION')
