@@ -1,7 +1,9 @@
 # Propellant Evaluation Program for z/OS
 Propellant Evaluation Program for z/OS is a mainframe implementation of the program
-ProPEP that traces back to the mid 1980's from the Naval Weapons Center at China Lake
-and Martin Marietta with very little documentation.
+PEP that traces back to the mid 1970's from the Naval Weapons Center at China Lake.
+From there, Martin Marietta (the Martin in Lockheed Martin) updated the code into what
+is known as ProPEP in the mid 1980's. There is very little documentation to be found, 
+I have included the NWC TP 6037 document in this repository.
 The last official database was updated in 1986 by John Commings.
 However, I have included an updated version last updated by
 Richard Nakka https://www.nakka-rocketry.net.
